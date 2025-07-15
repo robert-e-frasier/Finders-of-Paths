@@ -1,0 +1,15 @@
+{
+  "name": "Finders of Paths",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Metrasier Studios",
+  "license": "Finders of Paths License v1.0",
+  "description": "A dynamic, on-the-fly world and NPC generator for Pathfinder 2E. Build entire towns, stock shops, create NPCs, and weave deep story elements in seconds — all from a sleek, desktop-native interface.",
+  "devDependencies": {
+    "electron": "^37.2.1"
+  }
+}
