@@ -2,8 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\css"
+    "\\app\\assets",
+    "\\app\\components",
+    "\\app\\css",
+    "\\app\\js",
+    "\\app\\js\\components",
+    "\\src"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\src\\main.cpp",
   "PreviewInSolutionExplorer": false
 }
