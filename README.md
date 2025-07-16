@@ -1,6 +1,6 @@
 # Finders of Paths
 
-### ***"Because 'Door Bookman' deserves a better off fly name."***
+### ***"Because 'Door Bookman' deserves a better off the fly name."***
 
 ## Description
 Finders of Paths is a project to help DMs escape that all-too-familiar nightmare: "Uhhh... the NPC's name is… ahhh... Steve? No, no… Door... Book… ahhh... yeah! Door Bookman! He's the potion guy! Wait, he sells arrows of healing?! Uh-oh… you rolled a nat 20 on persuasion?!? AHHHHHH!"
@@ -27,23 +27,35 @@ So grab your dice, pour another mug of questionable tavern ale, and get ready to
 
 ## 🛠️ Contributing
 
-So, you want to help expand the madness? Awesome! We welcome brave adventurers (uh, contributors) who want to build, tweak, or add new features to Finders of Paths.
+So, you want to help expand the madness? Awesome! We welcome brave adventurers (uh, contributors) who want to build, tweak, or add new features to **Finders of Paths**.
 
 Before you dive in swinging your code sword, here’s what you need to know:
 
-- Please read the LICENSE file first. No, really. Just like reading that mysterious scroll before you accidentally summon a demon goat. It matters.
-- Any files you submit must include this header at the very top:
+- **Read the LICENSE file first.** No, really. Just like reading that mysterious scroll before you accidentally summon a demon goat — it matters. It details what you can (and cannot) do, and ensures we all play by the same magical rules.
+- **We use Electron.** Yup, this app runs as a sleek, offline desktop window thanks to Electron magic under the hood — no web browser required! So, keep that in mind when working with code and modules.
+- **Every file you submit must include this license header at the top (or as close as possible):**
 
+For **C++**, **JavaScript**, **CSS**, **JSON**, and general code files:
+```js
 /*
-Finders of Paths License v1.0\
-See LICENSE file in the root of this repository for details.\
-Unauthorized commercial use is prohibited.\
+Finders of Paths License v1.0
+See LICENSE file in the root of this repository for details.
+Unauthorized commercial use is prohibited.
 */
+```
 
-- Stick to the style and structure of the project so our codebase doesn’t end up looking like a gelatinous cube full of random bones.
-- Make your commit messages clear — no “fixed stuff” or “maybe works??”. We love descriptive commits that help us understand what you actually did.
-- Submit a pull request when you’re ready, and we’ll check it out faster than a bard can start a tavern brawl.
+For **HTML** files:
+```html
+<!--
+Finders of Paths License v1.0
+See LICENSE file in the root of this repository for details.
+Unauthorized commercial use is prohibited.
+-->
+```
 
-We’re all here to build an amazing tool together, but let’s make sure everyone plays nice and respects the rules of the realm.
+- **Stick to the style and structure.** We don’t want the codebase turning into a chaotic gelatinous cube with random bones and half-melted scripts inside. Keep things clean and consistent so other adventurers can understand your spells.
+- **Write clear commit messages.** None of that “fixed stuff” or “idk maybe works??” business. Be descriptive so we can understand your quest log and track changes like a well-kept spellbook.
+- **Submit a pull request when you’re ready.** We’ll review it faster than a bard starts a tavern brawl. If changes are needed, we’ll let you know so your contribution can reach its final form.
+- **Be kind, respect the project, and remember — it’s a collaborative adventure.** We’re all here to build an epic tool together, and that means good vibes only.
 
-Thanks for wanting to join the party — now grab your keyboard, prepare your spell slots (or functions), and let’s make something epic together!
+Thanks for wanting to join the party — now grab your keyboard, prepare your spell slots (or functions), and let’s make something legendary together!
