@@ -2,13 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\assets",
-    "\\app\\components",
-    "\\app\\css",
-    "\\app\\js",
-    "\\app\\js\\components",
-    "\\src"
+    "\\app\\assets\\Icons",
+    "\\app\\js\\components"
   ],
-  "SelectedNode": "\\src\\main.cpp",
+  "SelectedNode": "\\app\\package.json",
   "PreviewInSolutionExplorer": false
 }

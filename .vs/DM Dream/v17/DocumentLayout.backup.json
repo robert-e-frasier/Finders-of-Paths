@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\rober\\Desktop\\DM Dream\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rober\\Desktop\\DM Dream\\app\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rober\\Desktop\\DM Dream\\app\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rober\\Desktop\\DM Dream\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rober\\Desktop\\DM Dream\\app\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rober\\Desktop\\DM Dream\\app\\js\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\js\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rober\\Desktop\\DM Dream\\app\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rober\\Desktop\\DM Dream\\app\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -78,11 +78,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\rober\\Desktop\\DM Dream\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "api.js",
               "DocumentMoniker": "C:\\Users\\rober\\Desktop\\DM Dream\\app\\js\\api.js",
               "RelativeDocumentMoniker": "app\\js\\api.js",
@@ -116,7 +116,8 @@
               "RelativeToolTip": ".gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-15T01:27:04.945Z"
+              "WhenOpened": "2025-07-15T01:27:04.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,7 +129,8 @@
               "RelativeToolTip": "app\\pages\\help.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:21:27.659Z"
+              "WhenOpened": "2025-07-15T01:21:27.659Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -140,7 +142,8 @@
               "RelativeToolTip": "app\\pages\\settings.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:21:14.982Z"
+              "WhenOpened": "2025-07-15T01:21:14.982Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -152,7 +155,8 @@
               "RelativeToolTip": "app\\pages\\countries.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwAUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:13:58.917Z"
+              "WhenOpened": "2025-07-15T01:13:58.917Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -164,7 +168,8 @@
               "RelativeToolTip": "app\\pages\\realms.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwAUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:10:30.365Z"
+              "WhenOpened": "2025-07-15T01:10:30.365Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -176,7 +181,8 @@
               "RelativeToolTip": "app\\pages\\townsandcities.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwAUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:10:16.138Z"
+              "WhenOpened": "2025-07-15T01:10:16.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -188,7 +194,8 @@
               "RelativeToolTip": "app\\pages\\shops.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:09:58.237Z"
+              "WhenOpened": "2025-07-15T01:09:58.237Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -200,7 +207,8 @@
               "RelativeToolTip": "app\\pages\\npc.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwAUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:09:49.387Z"
+              "WhenOpened": "2025-07-15T01:09:49.387Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -212,7 +220,8 @@
               "RelativeToolTip": "app\\pages\\items.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:07:52.864Z"
+              "WhenOpened": "2025-07-15T01:07:52.864Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -224,11 +233,12 @@
               "RelativeToolTip": "app\\pages\\dashboard.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-15T01:07:11.536Z"
+              "WhenOpened": "2025-07-15T01:07:11.536Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "main.js",
               "DocumentMoniker": "C:\\Users\\rober\\Desktop\\DM Dream\\app\\main.js",
               "RelativeDocumentMoniker": "app\\main.js",
@@ -267,26 +277,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\rober\\Desktop\\DM Dream\\app\\css\\styles.css",
               "RelativeDocumentMoniker": "app\\css\\styles.css",
               "ToolTip": "C:\\Users\\rober\\Desktop\\DM Dream\\app\\css\\styles.css",
               "RelativeToolTip": "app\\css\\styles.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAnwFkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-07-14T16:44:34.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\rober\\Desktop\\DM Dream\\app\\index.html",
               "RelativeDocumentMoniker": "app\\index.html",
               "ToolTip": "C:\\Users\\rober\\Desktop\\DM Dream\\app\\index.html",
               "RelativeToolTip": "app\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-14T16:43:37.181Z",
               "EditorCaption": ""

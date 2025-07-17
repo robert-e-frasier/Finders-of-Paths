@@ -80,8 +80,15 @@ body {
         transition: opacity 0.3s;
     }
 
-    /* Hover: move and shadow */
+    /* Hover: move and shadow for svg */
     .nav-btn:hover .icon svg {
+        transform: translate(-2px, -2px);
+        filter: drop-shadow(6px 6px 2px rgba(75, 1, 1, 0.5));
+        opacity: 1 !important;
+    }
+
+    /* Hover: move and shadow for img */
+    .nav-btn:hover .icon img {
         transform: translate(-2px, -2px);
         filter: drop-shadow(6px 6px 2px rgba(75, 1, 1, 0.5));
         opacity: 1 !important;
