@@ -1,0 +1,16 @@
+/* Finders of Paths License v1.0
+ See LICENSE file in the root of this repository for details.
+ Unauthorized commercial use is prohibited. */
+
+.widget-display {
+    background: rgba(60, 60, 60, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: sans-serif;
+    color: #ddd;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -14,8 +14,49 @@ function loadPage(page) {
         .then(response => response.text())
         .then(html => {
             document.getElementById('content').innerHTML = html;
+
+            // Clear previous flags
+            delete window.__scriptReady;
+
+            // Attempt to load the associated script
+            if (page === 'dashboard') {
+                const gridstackScript = document.createElement('script');
+                gridstackScript.src = 'node_modules/gridstack/dist/gridstack-all.js';
+                gridstackScript.onload = () => {
+                    console.log('🧱 Gridstack loaded');
+                    loadDashboardScript();
+                };
+                gridstackScript.onerror = () => {
+                    console.error('❌ Failed to load Gridstack!');
+                };
+                document.body.appendChild(gridstackScript);
+            } else {
+                loadDashboardScript();
+            }
+
+            function loadDashboardScript() {
+                const script = document.createElement('script');
+                script.src = `js/components/${page}.js`;
+                script.onload = () => {
+                    if (typeof window.initializeDashboard === 'function') {
+                        console.log('📦 initializeDashboard is defined, calling it...');
+                        window.initializeDashboard();
+                    }
+                };
+                script.onerror = () => {
+                    console.error(`Could not load js/components/${page}.js`);
+                };
+                document.body.appendChild(script);
+
+                setTimeout(() => {
+                    if (!window.__scriptReady) {
+                        console.error(`${page}.js loaded but did not signal readiness or ran into a silent failure`);
+                    }
+                }, 1500);
+            }
         })
-        .catch(err => {
+        .catch(() => {
+            console.error(`❌ Failed to load page: pages/${page}.html`);
             document.getElementById('content').innerHTML = '<p>Error loading page.</p>';
         });
 }

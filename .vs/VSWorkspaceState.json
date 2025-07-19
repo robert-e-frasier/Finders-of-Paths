@@ -2,9 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\assets\\Icons",
-    "\\app\\js\\components"
+    "\\app\\components",
+    "\\app\\components\\widgets",
+    "\\app\\css",
+    "\\app\\css\\components",
+    "\\app\\js",
+    "\\app\\js\\components",
+    "\\app\\pages"
   ],
-  "SelectedNode": "\\app\\package.json",
+  "SelectedNode": "\\app\\js\\preload.js",
   "PreviewInSolutionExplorer": false
 }

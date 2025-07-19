@@ -1,0 +1,41 @@
+/* Finders of Paths License v1.0
+ See LICENSE file in the root of this repository for details.
+ Unauthorized commercial use is prohibited. */
+
+.grid-stack {
+    background-color: transparent; /* or transparent */
+    min-height: 100vh;
+    background-image: none;
+    /* background-size: 20px 20px;  will be overwritten if JS sets it dynamically */
+}
+
+/* Grid lines visible only when dragging */
+.grid-stack.grid-lines {
+    background-image:
+        /* Horizontal Outer Lines */
+        linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px), /* Top */
+        linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px), /* Bottom */
+        /* Vertical Outer Lines */
+        linear-gradient(90deg, rgba(0, 0, 0, .05) 1px, transparent 1px), /* Left */
+        linear-gradient(90deg, rgba(0, 0, 0, .05) 1px, transparent 1px); /* Right */
+
+    background-size: 
+        var(--grid-cell-size-y) var(--grid-cell-size-y), /* Top */
+        var(--grid-cell-size-y) var(--grid-cell-size-y), /* Bottom */
+        var(--grid-cell-size-x) var(--grid-cell-size-x), /* Left */
+        var(--grid-cell-size-x) var(--grid-cell-size-x); /* Right */
+
+    background-position: 
+        -12px -12px, /* Top */
+        8px 8px, /* Bottom */
+        -14px -14px, /* Left */
+        8px 8px; /* Right */
+}
+
+
+.grid-stack-item {
+    /* This ensures the GridStack item behaves properly */
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}

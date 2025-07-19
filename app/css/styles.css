@@ -10,6 +10,14 @@ body {
     position: relative;
     
 }
+#content {
+    padding-left: 300px; /* adjust as needed based on expanded width */
+    transition: padding-left 0.3s ease;
+}
+
+#sidebar.collapsed ~ #content {
+    padding-left: 80px; /* adjust as needed based on collapsed width */
+}
 
 /* ==================================================
    Background Image
@@ -30,11 +38,12 @@ body {
         pointer-events: none; /* Don't block clicks */
     }
 
+
 /* ==================================================
    Sidebar container
 ================================================== */
 #sidebar {
-    position: absolute;
+    position: fixed;
     top: 50px;
     left: 20px;
     width: 230px;

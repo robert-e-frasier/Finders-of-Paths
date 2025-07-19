@@ -1,6 +1,22 @@
-<!-- Finders of Paths License v1.0
+﻿<!-- Finders of Paths License v1.0
 See LICENSE file in the root of this repository for details.
 Unauthorized commercial use is prohibited. -->
 
-<h1>Dashboard</h1>
-<p>This is your main overview page.</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GridStack Test</title>
+    <link rel="stylesheet" href="../app/css/components/dashboard.css"> <!-- Will error out if it is set to path ../css/components/dashboard.css-->
+    <link rel="stylesheet" href="../app/node_modules/gridstack/dist/gridstack.min.css"> <!-- Will error out if it is set to path ../node_modules/gridstack/dist/gridstack.min.css-->
+    <link rel="stylesheet" href="../app/components/widgets/widget-display.css">
+</head>
+<body>
+    <h1>Dashboard Test</h1>
+    <div class="grid-stack"></div>
+
+
+    <script src="../node_modules/gridstack/dist/gridstack-all.js"></script>
+    <script src="../js/components/dashboard.js"></script>
+</body>
+</html>

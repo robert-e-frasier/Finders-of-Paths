@@ -1,4 +1,4 @@
-/* Finders of Paths License v1.0
+﻿/* Finders of Paths License v1.0
  See LICENSE file in the root of this repository for details.
  Unauthorized commercial use is prohibited. */
 
@@ -10,12 +10,16 @@ function createWindow() {
         width: 1200,
         height: 800,
         webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false
+            contextIsolation: true,        // MUST be true to use contextBridge
+            nodeIntegration: false,        // Should also be false for security
+            enableRemoteModule: false,     // Optional, disables remote if unused
+            preload: path.join(__dirname, 'js', 'preload.js'), // 👈 Required for contextBridge to run
+            sandbox: false               // ⚠️ Required to get console logging to work.
         },
     });
 
     win.loadFile('index.html');
+    //win.webContents.openDevTools(); // This opens DevTools when the app starts
 }
 
 app.whenReady().then(createWindow);
