@@ -13,8 +13,8 @@ function createWindow() {
             contextIsolation: true,        // MUST be true to use contextBridge
             nodeIntegration: false,        // Should also be false for security
             enableRemoteModule: false,     // Optional, disables remote if unused
-            preload: path.join(__dirname, 'js', 'preload.js'), // 👈 Required for contextBridge to run
-            sandbox: false               // ⚠️ Required to get console logging to work.
+            preload: path.join(__dirname, 'js', 'preload.js'), // Required for contextBridge to run
+            sandbox: false               // Required to get console logging to work.
         },
     });
 

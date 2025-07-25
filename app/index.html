@@ -2,42 +2,53 @@
 See LICENSE file in the root of this repository for details.
 Unauthorized commercial use is prohibited. -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta and document setup -->
     <meta charset="UTF-8" />
     <title>Finders of Paths</title>
+
+    <!-- Global stylesheet for layout and theming -->
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-    <!-- Sidebar container -->
+    <!-- ========================
+         Sidebar Navigation Panel
+         ========================
+         Handles primary app navigation. Each button triggers page content
+         loading via JavaScript (see app.js). Icons + labels used for accessibility.
+    -->
     <div id="sidebar" class="expanded">
-        <!-- Example nav buttons -->
+
+        <!-- === Primary Navigation Buttons === -->
+        <!-- Dashboard -->
         <button class="nav-btn">
             <span class="icon">
-                <!-- Icon -->
-                <img src="./assets/icons/game-icons_3d-glasses.svg" alt="Dshboard Icon" />
+                <!-- SVG icon: glasses for dashboard theme -->
+                <img src="./assets/icons/game-icons_3d-glasses.svg" alt="Dashboard Icon" />
             </span>
-            <!-- Label -->
             <span class="label">Dashboard</span>
         </button>
+
+        <!-- Items -->
         <button class="nav-btn">
             <span class="icon">
+                <!-- SVG icon (shared across multiple sections for now) -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Items</span>
         </button>
 
-        <!-- NPC -->
+        <!-- NPCs -->
         <button class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">NPC</span>
@@ -47,7 +58,7 @@ Unauthorized commercial use is prohibited. -->
         <button class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Shops</span>
@@ -57,7 +68,7 @@ Unauthorized commercial use is prohibited. -->
         <button class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Towns and Cities</span>
@@ -67,7 +78,7 @@ Unauthorized commercial use is prohibited. -->
         <button class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Countries</span>
@@ -77,20 +88,21 @@ Unauthorized commercial use is prohibited. -->
         <button class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Realms</span>
         </button>
 
-        <!-- Spacer -->
+        <!-- Spacer: pushes footer buttons to bottom of sidebar -->
         <div class="spacer"></div>
 
+        <!-- === Utility Navigation === -->
         <!-- Settings -->
         <button class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Settings</span>
@@ -100,31 +112,45 @@ Unauthorized commercial use is prohibited. -->
         <button class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Help</span>
         </button>
 
-        <!-- Spacer -->
+        <!-- Extra Spacer before collapse control -->
         <div class="spacer"></div>
 
+        <!-- Collapse Button: toggles sidebar width -->
         <button id="collapse-btn" class="nav-btn">
             <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M176 16H336C353.7 16 368 30.33 368 48H144C144 30.33 158.3 16 176 16zM144 48H368V112H144V48zM64 80H112V400H64V80zM400 80H448V400H400V80zM96 128H416C433.7 128 448 142.3 448 160V432C448 476.2 412.2 512 368 512H144C99.82 512 64 476.2 64 432V160C64 142.3 78.33 128 96 128zM96 432C96 458.5 117.5 480 144 480H368C394.5 480 416 458.5 416 432V192H96V432z" />
+                    <path d="..." />
                 </svg>
             </span>
             <span class="label">Collapse</span>
         </button>
     </div>
-    <!-- Containers for pages-->
+
+    <!-- =======================
+         Dynamic Content Container
+         =======================
+         Content from internal pages is injected here via JS.
+         Example: dashboard.html, items.html, etc.
+    -->
     <div id="content"></div>
-    <!-- Containers for popup modal windows-->
+
+    <!-- =======================
+         Modal Container
+         =======================
+         Used for settings/help popups. Pages loaded via fetch and
+         injected into modal-content. Controlled in app.js.
+    -->
     <div id="modal" class="modal">
         <div id="modal-content" class="modal-content"></div>
     </div>
 
+    <!-- JS Logic for navigation, dynamic content loading, modal handling -->
     <script src="js/app.js"></script>
 </body>
 </html>

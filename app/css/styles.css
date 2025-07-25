@@ -3,52 +3,58 @@ See LICENSE file in the root of this repository for details.
 Unauthorized commercial use is prohibited. */
 
 
+/* ================================================
+   Base Styles
+   ================================================ */
 body {
     margin: 0;
     font-family: sans-serif;
     color: #000000;
     position: relative;
-    
 }
+
+/* Main content area adjusts based on sidebar state */
 #content {
-    padding-left: 300px; /* adjust as needed based on expanded width */
+    padding-left: 300px; /* space for expanded sidebar */
     transition: padding-left 0.3s ease;
 }
 
+/* Reduce left padding when sidebar is collapsed */
 #sidebar.collapsed ~ #content {
-    padding-left: 80px; /* adjust as needed based on collapsed width */
+    padding-left: 80px; /* match collapsed sidebar width */
 }
 
-/* ==================================================
-   Background Image
-================================================== */
-    body::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: url("../assets/images/Paper-Background.jpg");
-        background-repeat: repeat-y;
-        background-size: 100% auto;
-        background-position: left top;
-        filter: blur(2px); /* Adjust blur strength here */
-        z-index: -1; /* Behind everything */
-        pointer-events: none; /* Don't block clicks */
-    }
+
+/* ================================================
+   Background Image Layer (blurred behind UI)
+   ================================================ */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/images/Paper-Background.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: left top;
+    filter: blur(2px); /* subtle visual depth */
+    z-index: -1; /* behind all content */
+    pointer-events: none; /* ensure interactivity passes through */
+}
 
 
-/* ==================================================
-   Sidebar container
-================================================== */
+/* ================================================
+   Sidebar Container
+   ================================================ */
 #sidebar {
     position: fixed;
     top: 50px;
     left: 20px;
     width: 230px;
     height: 525px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25); /* semi-transparent dark panel */
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     padding: 10px;
@@ -58,9 +64,10 @@ body {
     transition: width 0.3s, background-color 0.3s, opacity 0.3s;
 }
 
-/* ==================================================
-   Nav button base
-================================================== */
+
+/* ================================================
+   Navigation Button Styles
+   ================================================ */
 .nav-btn {
     height: 48px;
     width: 100%;
@@ -74,7 +81,7 @@ body {
     transition: transform 0.2s, opacity 0.3s;
 }
 
-    /* Icon SVG default style */
+    /* SVG Icon Styling (default state) */
     .nav-btn .icon svg {
         width: 24px;
         height: 24px;
@@ -83,45 +90,54 @@ body {
         transition: transform 0.2s, filter 0.2s, opacity 0.2s;
     }
 
-    /* Label text */
+    /* Label Text (title beside icon) */
     .nav-btn .label {
         white-space: nowrap;
         transition: opacity 0.3s;
     }
 
-    /* Hover: move and shadow for svg */
+
+    /* =========== Hover Effects =========== */
+
+    /* SVG icon hover: slight motion and shadow */
     .nav-btn:hover .icon svg {
         transform: translate(-2px, -2px);
         filter: drop-shadow(6px 6px 2px rgba(75, 1, 1, 0.5));
         opacity: 1 !important;
     }
 
-    /* Hover: move and shadow for img */
+    /* Image icon hover: same motion and styling */
     .nav-btn:hover .icon img {
         transform: translate(-2px, -2px);
         filter: drop-shadow(6px 6px 2px rgba(75, 1, 1, 0.5));
         opacity: 1 !important;
     }
 
+    /* Label hover: text motion + shadow for depth */
     .nav-btn:hover .label {
         transform: translate(-2px, -2px);
         text-shadow: 6px 6px 2px rgba(75, 1, 1, 0.5);
     }
 
-/* Spacer */
+
+/* ================================================
+   Utility Spacing
+   ================================================ */
 .spacer {
     height: 20px;
 }
 
-/* ==================================================
-   Collapsed sidebar
-================================================== */
+
+/* ================================================
+   Collapsed Sidebar State
+   ================================================ */
 #sidebar.collapsed {
     width: 60px;
     background-color: transparent;
     align-items: center;
 }
 
+    /* Hide labels in collapsed state */
     #sidebar.collapsed .label {
         opacity: 0;
         position: absolute;
@@ -134,28 +150,35 @@ body {
         transition: transform 0.2s, opacity 0.3s;
     }
 
+    /* Nav button base opacity when collapsed */
     #sidebar.collapsed .nav-btn {
         justify-content: center;
         opacity: 0.2;
     }
 
+        /* Reveal nav button on hover */
         #sidebar.collapsed .nav-btn:hover {
             opacity: 1;
         }
 
+            /* Reveal label on hover */
             #sidebar.collapsed .nav-btn:hover .label {
                 opacity: 1;
             }
 
+        /* Remove right margin from icons when collapsed */
         #sidebar.collapsed .nav-btn .icon svg {
             margin-right: 0;
         }
 
-/* ==================================================
-   Modal container (hidden by default)
-================================================== */
+
+/* ================================================
+   Modal Overlay + Content Styling
+   ================================================ */
+
+/* Fullscreen backdrop modal (hidden by default) */
 .modal {
-    display: none; /* Hidden initially */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -163,10 +186,10 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Backdrop */
+    background-color: rgba(0, 0, 0, 0.5); /* dimmed overlay */
 }
 
-/* Modal content box */
+/* Inner modal box */
 .modal-content {
     background-color: #fff;
     margin: 10% auto;

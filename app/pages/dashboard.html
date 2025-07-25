@@ -6,17 +6,79 @@ Unauthorized commercial use is prohibited. -->
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>GridStack Test</title>
-    <link rel="stylesheet" href="../app/css/components/dashboard.css"> <!-- Will error out if it is set to path ../css/components/dashboard.css-->
-    <link rel="stylesheet" href="../app/node_modules/gridstack/dist/gridstack.min.css"> <!-- Will error out if it is set to path ../node_modules/gridstack/dist/gridstack.min.css-->
+    <title>Dashboard</title>
+
+    <!-- Component + layout styling -->
+    <link rel="stylesheet" href="../app/css/components/dashboard.css">
+
+    <!-- GridStack library styles (for responsive draggable layout) -->
+    <link rel="stylesheet" href="../app/node_modules/gridstack/dist/gridstack.min.css">
+
+    <!-- Widget styling: shared base template for all grid widgets -->
     <link rel="stylesheet" href="../app/components/widgets/widget-display.css">
 </head>
 <body>
-    <h1>Dashboard Test</h1>
+
+    <!-- ==================================================
+         Dashboard Header (Title + Gear Menu Trigger)
+    =================================================== -->
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+
+        <!-- Settings gear with dropdown menu (click toggles open/closed) -->
+        <div class="settings-gear-wrapper">
+            <!-- Gear icon used as visual toggle for settings panel -->
+            <img src="../app/assets/icons/game-icons_3d-glasses.svg" alt="Settings" id="dashboard-settings-gear">
+
+            <!-- Gear dropdown menu: contains preset/layout/widget controls -->
+            <div id="dashboard-settings-menu" class="settings-menu hidden">
+
+                <!-- Preset dashboard layout selector (opens preset panel - to be implemented) -->
+                <button class="settings-btn" id="preset-dashboards-btn">Preset Dashboards</button>
+
+                <!-- Add new widget to grid layout (to be implemented) -->
+                <button class="settings-btn" id="add-widget-btn">Add Widget</button>
+
+                <!-- Save current widget arrangement into dashboard presets -->
+                <button class="settings-btn" id="save-layout-btn">Save Current Layout</button>
+
+                <!-- Reset layout to blank or last-saved state -->
+                <button class="settings-btn" id="reset-layout-btn">Reset Layout</button>
+
+                <!-- Toggle grid line visibility (horizontal + vertical guide lines) -->
+                <div class="settings-toggle">
+                    <span>Toggle Grid Lines</span>
+                    <button class="slider-toggle" id="grid-toggle" aria-pressed="false"></button>
+                </div>
+
+                <!-- Toggle snapping widgets to grid cells during drag/resize -->
+                <div class="settings-toggle">
+                    <span>Snap to Grid</span>
+                    <button class="slider-toggle" id="snap-toggle" aria-pressed="true"></button>
+                </div>
+
+                <!-- Import and export JSON layout files for backup/sharing -->
+                <button class="settings-btn" id="import-layout-btn">Import Layout</button>
+                <button class="settings-btn" id="export-layout-btn">Export Layout</button>
+
+                <!-- Toggle grid interactivity: lock/unlock drag/resize behavior -->
+                <div class="settings-toggle">
+                    <span>Lock Edit Mode</span>
+                    <button class="slider-toggle" id="lock-toggle" aria-pressed="false"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================================================
+         GridStack Container (Main Dashboard Grid Area)
+    =================================================== -->
     <div class="grid-stack"></div>
 
+    <!-- GridStack runtime (handles drag, drop, resize, serialization) -->
+    <script defer src="../node_modules/gridstack/dist/gridstack-all.js"></script>
 
-    <script src="../node_modules/gridstack/dist/gridstack-all.js"></script>
-    <script src="../js/components/dashboard.js"></script>
+    <!-- Custom dashboard initialization logic (handles settings + grid) -->
+    <script defer src="../js/components/dashboard.js"></script>
 </body>
 </html>

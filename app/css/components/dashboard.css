@@ -1,41 +1,154 @@
 /* Finders of Paths License v1.0
- See LICENSE file in the root of this repository for details.
- Unauthorized commercial use is prohibited. */
+   See LICENSE file in the root of this repository for details.
+   Unauthorized commercial use is prohibited. */
 
+/* ==================================================
+   GridStack Base Layout
+================================================== */
+
+/* Primary grid container with transparent background */
 .grid-stack {
-    background-color: transparent; /* or transparent */
+    background-color: transparent;
     min-height: 100vh;
     background-image: none;
-    /* background-size: 20px 20px;  will be overwritten if JS sets it dynamically */
 }
 
-/* Grid lines visible only when dragging */
-.grid-stack.grid-lines {
-    background-image:
-        /* Horizontal Outer Lines */
-        linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px), /* Top */
-        linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px), /* Bottom */
-        /* Vertical Outer Lines */
-        linear-gradient(90deg, rgba(0, 0, 0, .05) 1px, transparent 1px), /* Left */
-        linear-gradient(90deg, rgba(0, 0, 0, .05) 1px, transparent 1px); /* Right */
+    /* Grid lines shown during drag/resize events using layered gradients */
+    .grid-stack.grid-lines {
+        background-image: linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px), linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, .05) 1px, transparent 1px);
+        background-size: var(--grid-cell-size-y) var(--grid-cell-size-y), var(--grid-cell-size-y) var(--grid-cell-size-y), var(--grid-cell-size-x) var(--grid-cell-size-x), var(--grid-cell-size-x) var(--grid-cell-size-x);
+        background-position: -12px -12px, 8px 8px, -14px -14px, 8px 8px;
+    }
 
-    background-size: 
-        var(--grid-cell-size-y) var(--grid-cell-size-y), /* Top */
-        var(--grid-cell-size-y) var(--grid-cell-size-y), /* Bottom */
-        var(--grid-cell-size-x) var(--grid-cell-size-x), /* Left */
-        var(--grid-cell-size-x) var(--grid-cell-size-x); /* Right */
-
-    background-position: 
-        -12px -12px, /* Top */
-        8px 8px, /* Bottom */
-        -14px -14px, /* Left */
-        8px 8px; /* Right */
-}
-
-
+/* Ensures widgets stretch to fill their assigned grid space */
 .grid-stack-item {
-    /* This ensures the GridStack item behaves properly */
     display: flex;
     align-items: stretch;
     justify-content: stretch;
 }
+
+/* ==================================================
+   Dashboard Header Bar
+================================================== */
+
+/* Top bar containing title and gear icon; semi-transparent for layering over background */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(1, 1, 1, 0.25);
+    border-radius: 15px;
+    margin: 0 20px;
+    padding: 1px 5px;
+}
+
+/* ==================================================
+   Settings Gear Icon + Interactive Menu
+================================================== */
+
+/* Container for the gear icon and settings dropdown */
+.settings-gear-wrapper {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Gear icon default styling */
+#dashboard-settings-gear {
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    transition: transform 0.2s, filter 0.2s, opacity 0.2s;
+}
+
+    /* Hover effect for non-active gear: slight translation and red-tinted drop shadow */
+    #dashboard-settings-gear:not(.active):hover {
+        transform: translate(-2px, -2px);
+        filter: drop-shadow(6px 6px 2px rgba(75, 1, 1, 0.5));
+        opacity: 1 !important;
+    }
+
+    /* Active (clicked/open) state: solid DodgerBlue shadow, no movement */
+    #dashboard-settings-gear.active {
+        transform: none;
+        filter: drop-shadow(6px 6px 2px rgba(30, 144, 255, 1));
+    }
+
+/* Dropdown menu: styled as a pop-out card with dark semi-transparency and white text */
+.settings-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    padding: 10px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 999;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+    /* Hidden state used for toggle logic */
+    .settings-menu.hidden {
+        display: none;
+    }
+
+/* Button-style entries in the dropdown: uniform layout and interaction */
+.settings-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+    /* Hover feedback for dropdown buttons */
+    .settings-btn:hover {
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+
+/* ==================================================
+   Custom Toggle Switches (Slider Style)
+================================================== */
+
+/* Outer toggle track: pill shape with themed transparency */
+.slider-toggle {
+    width: 75px;
+    height: 26px;
+    background-color: rgba(1, 1, 1, 0.75); /* Off state */
+    border: none;
+    border-radius: 13px; /* Clean pill look */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0;
+}
+
+    /* Inner toggle circle ("thumb"): consistent color and size, transitions smoothly */
+    .slider-toggle::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 22px;
+        background-color: rgba(50, 50, 50, 0.95); /* Consistent thumb color */
+        border-radius: 11px;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+    }
+
+    /* ON state: green track, thumb slides to right edge */
+    .slider-toggle[aria-pressed="true"] {
+        background-color: rgba(34, 197, 94, 0.95); /* Tailwind green-500 style */
+    }
+
+        .slider-toggle[aria-pressed="true"]::before {
+            transform: translateX(31px); /* Perfect fit: 75 - 40 - 2 (padding) - 2 (gap) */
+        }

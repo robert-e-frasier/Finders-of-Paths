@@ -2,13 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\app",
+    "\\app\\assets\\images",
     "\\app\\components",
     "\\app\\components\\widgets",
     "\\app\\css",
     "\\app\\css\\components",
     "\\app\\js",
-    "\\app\\js\\components",
-    "\\app\\pages"
+    "\\app\\js\\components"
   ],
   "SelectedNode": "\\app\\js\\preload.js",
   "PreviewInSolutionExplorer": false

@@ -1,4 +1,4 @@
-﻿console.log('✅ test.js is running');
+﻿console.log('test.js is running');
 console.log('GridStack exists:', typeof GridStack !== 'undefined');
 
 document.addEventListener('DOMContentLoaded', () => {
